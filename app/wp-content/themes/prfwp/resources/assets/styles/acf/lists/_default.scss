@@ -1,0 +1,40 @@
+/* stylelint-disable */
+
+.acfm-list-default {
+    display: grid;
+    padding-left: initial;
+    margin-bottom: 5rem;
+    text-align: center;
+    list-style: none;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+    @media #{$sm} {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        background: $brand_white;
+        border-radius: 2rem;
+        box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.03);
+
+        &:hover {
+            svg {
+                & path {
+                    fill: $brand_primary;
+                }
+            }
+        }
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        font-weight: $font_weight_bold;
+        color: $brand_dark;
+    }
+}

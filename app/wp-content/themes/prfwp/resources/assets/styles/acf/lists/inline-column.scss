@@ -1,0 +1,102 @@
+/* stylelint-disable */
+
+.acfm-list-inline-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+    @media #{$md} {
+        gap: 3rem;
+        align-items: start;
+    }
+
+    &__item {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+        @media #{$md} {
+            justify-content: left;
+        }
+    }
+
+    &__text {
+        text-align: left;
+    }
+
+    &__icon {
+        &:hover {
+            & path {
+                fill: $brand_primary;
+            }
+        }
+
+        & svg {
+            fill: $brand_primary;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 65px;
+        height: 65px;
+        font-size: 3rem;
+        font-weight: 600;
+        color: $brand_white;
+        background: linear-gradient(90deg, #2ab6fe, #3c72f4);
+        border-radius: 5rem;
+    }
+}
+
+img {
+    &.acfm-image {
+        max-width: 70px;
+    }
+}
+
+.platforms {
+    .acfm-list-inline {
+        padding: 0 3rem;
+        margin-bottom: 5rem;
+
+        @media #{$md} {
+            display: grid;
+            padding: 0;
+            grid-template-columns: 1fr;
+            row-gap: 1rem;
+        }
+
+        @media #{$xl} {
+            width: 62%;
+        }
+
+        &__item {
+            align-items: flex-start;
+            padding: 0;
+            transition: 0.4s ease;
+            gap: 1rem;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &__icon {
+            min-width: 40px;
+            height: auto;
+            background: none;
+            transform: scale(0.5);
+        }
+
+        &__title {
+            text-align: start;
+        }
+    }
+}

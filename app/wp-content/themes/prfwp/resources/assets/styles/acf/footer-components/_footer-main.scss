@@ -1,0 +1,25 @@
+.acfm-footer-main {
+    @include font-size-xs();
+    position: relative;
+    overflow: hidden;
+    &__title {
+        @include font-size-xs();
+        padding-bottom: 0.5em;
+        font-weight: $font_weight_medium;
+    }
+
+    a {
+        @include transition(color, 300ms);
+
+        &:hover,
+        &:active {
+            color: $brand_primary;
+        }
+    }
+
+    .acfm-row {
+        &__col:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+}

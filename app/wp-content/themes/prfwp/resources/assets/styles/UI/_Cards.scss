@@ -1,0 +1,94 @@
+// stylelint-disable
+
+.card {
+    padding: 5rem;
+    @include cards();
+
+    @media #{$until_md} {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    h3 {
+        font-weight: $font_weight_bold;
+        color: $brand_primary;
+    }
+}
+
+.blue-card {
+    padding: 2rem;
+    color: $brand_white;
+    background: $brand_primary !important;
+    @include cards();
+
+    @media #{$lg} {
+        transform: translate(16%, 12%);
+
+        &::after {
+            position: absolute;
+            bottom: 94%;
+            left: 22%;
+            content: '';
+            border-right: solid transparent 20px;
+            border-bottom: solid $brand_primary 10px;
+            border-left: solid transparent 0;
+            border-radius: 1px 0 0;
+            transform: scale(5.5);
+        }
+    }
+
+    span {
+        position: relative;
+        left: 3%;
+        z-index: 1;
+        font-weight: $font_weight_bold;
+    }
+
+    li {
+        font-weight: $font_weight_medium;
+    }
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 46rem;
+    padding: 3rem 6rem 2rem;
+    @include cards();
+}
+
+.card3 {
+    @include cards();
+    padding: 0;
+    margin: 0;
+
+    .acfm {
+        &-title,
+        &-text,
+        &-buttons {
+            padding: 1rem 3rem 1rem 5rem;
+        }
+
+        &-title {
+            padding-top: 3rem;
+            font-size: 3rem;
+        }
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+//.cards-content {
+//    .acfm-list-default {
+//        &__title,
+//        &__text {
+//            text-align: left;
+//        }
+//    }
+//}

@@ -1,0 +1,13 @@
+.acfm-footer {
+    &-text {
+        position: relative;
+        padding: 3.5rem 0;
+        br {
+            display: none;
+
+            @media #{$xl} {
+                display: initial;
+            }
+        }
+    }
+}

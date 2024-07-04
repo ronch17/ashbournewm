@@ -1,0 +1,77 @@
+/* stylelint-disable */
+
+.numbered-column {
+    .acfm-list-Numbered-card {
+        @media #{$md} {
+            flex-direction: column;
+            gap: 3rem;
+        }
+    }
+}
+
+.acfm-list-Numbered-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    gap: 3rem;
+
+    @media #{$md} {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    &__item {
+        display: flex;
+        -ms-flex-align: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+        text-align: center;
+        background: $brand_white;
+        border-radius: 4rem;
+        transition: 0.4s ease;
+        -webkit-box-align: center;
+
+        &:hover {
+            .acfm-number {
+                background: $brand_dark;
+                transition: 0.4s ease;
+            }
+        }
+    }
+
+    &__title {
+        padding: 1rem 0;
+        font-size: 3rem;
+        font-weight: $font_weight_bold;
+        color: $brand_primary;
+    }
+
+    //&__number {
+    //    position: relative;
+    //    right: 3rem;
+    //    @media #{$md} {
+    //        right: 6rem;
+    //    }
+    //}
+
+    .acfm-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 9.5rem;
+        height: 9.5rem;
+        font-size: 3rem;
+        font-weight: 600;
+        color: $brand_white;
+        background: $brand_secondary;
+        border-radius: 10rem;
+        transition: 0.4s ease;
+    }
+}
+
+.colored-line {
+    width: 21%;
+    border-color: $brand_primary;
+}

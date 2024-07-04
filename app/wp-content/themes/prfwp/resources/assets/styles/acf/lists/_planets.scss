@@ -1,0 +1,334 @@
+/* stylelint-disable */
+
+.acfm-list-planets {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__url {
+        z-index: 99;
+        cursor: pointer;
+    }
+
+    .enableHash.active {
+        img {
+            scale: 1.4;
+        }
+    }
+
+    .enableHash:nth-child(5) {
+        .acfm-list-planets__image {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &__icon {
+        width: 15%;
+    }
+
+    &__image {
+        position: relative;
+        z-index: 2;
+        transition: scale 0.4s ease;
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 89%;
+            z-index: -1;
+            width: 160%;
+            content: '';
+            border: 1px solid;
+            border-image: url(http://ashbournewm.test/wp-content/uploads/2024/06/Frame-13.png) round 1%;
+        }
+
+        &:hover {
+            scale: 1.4;
+        }
+    }
+
+    &__title {
+        position: relative;
+        bottom: 13.5rem;
+        font-size: 3rem;
+        font-weight: $font_weight_medium;
+        color: $brand_white;
+    }
+}
+
+.account-types-new {
+    background-color: #101127;
+    background-image: url('/wp-content/uploads/2024/06/Mask-group-42-1.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    .planets-navbar {
+        @media #{$until_md} {
+            display: none;
+        }
+
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        transition: all 1s ease;
+
+        .scroll-watcher {
+            @media #{$until_xxl} {
+                left: 18%;
+                width: 65%;
+
+                animation-timeline: view(1800px);
+            }
+
+            position: absolute;
+            top: 40%;
+            left: 27%;
+            z-index: 1;
+            width: 48%;
+            height: 9px;
+            background: #cfd1ff;
+            transform-origin: left;
+
+            animation: scroll-watcher linear forwards;
+            scale: 0 50%;
+            animation-timeline: view(1800px);
+        }
+    }
+
+    .planets-navbar.fixed {
+        position: fixed;
+        top: 10%;
+        left: 30%;
+        transition: all 0.4s ease;
+    }
+
+    .acfm-image:has(.rocket) {
+        transform: rotate(90deg);
+        .rocket {
+            //transform: rotate(90deg);
+            animation: levitating 2s infinite alternate;
+        }
+    }
+
+    .acfm-image:has(.flash) {
+        display: none;
+        opacity: 0;
+    }
+
+    .parallax-section {
+        @media #{$until_md} {
+            display: none;
+        }
+
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        opacity: 0;
+        transition: opacity 1s;
+
+        .acfm-row {
+            position: fixed;
+            top: 38%;
+            left: 25%;
+            display: flex;
+            width: 55%;
+
+            @media ($until_xxl) {
+                left: 5%;
+                width: 95%;
+            }
+        }
+    }
+
+    .acfm-section {
+        .floating-planet {
+            transition: 2s ease;
+            translate: 130% 91%;
+            scale: 0;
+        }
+    }
+
+    .acfm-section.exit {
+        .acfm-image:has(.floating-planet) {
+            transition: all 1s ease 1.5s !important;
+            translate: -65% -55%;
+            scale: 0 !important;
+        }
+
+        .acfm-image:has(.flash) {
+            opacity: 0 !important;
+            transition: opacity 0.5s ease !important;
+            animation: none !important;
+        }
+
+        .acfm-image:has(.rocket) {
+            position: relative;
+            z-index: 9;
+
+            transition: transform 1s ease 0.4s !important;
+            transform: rotate(90deg) !important;
+
+            .rocket {
+                animation: 1s rocket-exit 1.2s forwards !important;
+            }
+        }
+
+        .acfm-account-types__item {
+            max-width: 0;
+            transition: 0.6s linear;
+
+            &__container {
+                display: none;
+                opacity: 0;
+                transition: 0.4s ease;
+            }
+        }
+    }
+
+    .acfm-section.exitdown {
+        .acfm-image:has(.floating-planet) {
+            transition: all 1s ease 1.5s !important;
+            translate: -65% -55%;
+            scale: 0 !important;
+        }
+
+        .acfm-image:has(.flash) {
+            opacity: 0 !important;
+            transition: opacity 0.5s ease !important;
+            animation: none !important;
+        }
+
+        .acfm-image:has(.rocket) {
+            position: relative;
+            z-index: 9;
+
+            transition: transform 1s ease 0.4s !important;
+            transform: rotate(90deg) !important;
+
+            .rocket {
+                animation: 1s rocket-exit 1.2s forwards !important;
+            }
+        }
+
+        .acfm-account-types__item {
+            max-width: 0;
+            transition: 0.6s linear;
+
+            &__container {
+                display: none;
+                opacity: 0;
+                transition: 0.4s ease;
+            }
+        }
+    }
+
+    .acfm-section.visible {
+        z-index: 11;
+        opacity: 1;
+
+        .floating-planet {
+            transition: 2s ease;
+            translate: 0;
+            scale: 1;
+        }
+
+        .float-col {
+            animation: levitating 2s infinite alternate;
+        }
+
+        .acfm-image:has(.rocket) {
+            position: relative;
+            z-index: 9;
+
+            transition: transform 1s ease 1s;
+            transform: rotate(0deg);
+            .rocket {
+                animation: 1s rocket-entrance;
+            }
+        }
+
+        @media #{$xxl} {
+            .acfm-image:has(.flash) {
+                position: absolute;
+                bottom: 18%;
+                left: -45%;
+                z-index: 1;
+                display: block;
+                transition: opacity 2s ease;
+                animation: flashlight 2s 1.5s forwards;
+            }
+        }
+
+        .tilt-card {
+            opacity: 0;
+            animation: 2s flashlight 1.5s forwards;
+        }
+
+        .floating-planet {
+            animation: levitating 4s infinite alternate, 1s grow forwards;
+            scale: 0;
+        }
+    }
+}
+
+@keyframes scroll-watcher {
+    to {
+        scale: 1 1;
+    }
+}
+
+@keyframes rocket-entrance {
+    from {
+        translate: -480% 0%;
+    }
+
+    to {
+        translate: 0% 0%;
+    }
+}
+
+@keyframes rocket-exit {
+    from {
+        translate: 0% 0%;
+    }
+
+    to {
+        translate: -480% 0%;
+    }
+}
+
+@keyframes rocket-rotate {
+    to {
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes flashlight {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes grow {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}

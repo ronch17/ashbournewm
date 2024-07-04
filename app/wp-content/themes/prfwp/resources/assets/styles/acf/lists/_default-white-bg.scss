@@ -1,0 +1,53 @@
+/* stylelint-disable */
+
+.acfm-list-default-white-bg {
+    display: grid;
+    padding-left: initial;
+    list-style: none;
+    grid-template-columns: 1fr;
+    @media #{$xl} {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media #{$lg} {
+        padding: 0 15rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 3rem;
+    }
+
+    &__text {
+        text-align: left;
+    }
+
+    &__icon {
+        &:hover {
+            & path {
+                fill: $brand_primary;
+            }
+        }
+
+        & svg {
+            fill: $brand_primary;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 70px;
+        height: 70px;
+        background: $brand_white;
+        border-radius: 5rem;
+    }
+}
+
+img {
+    &.acfm-image {
+        max-width: 70px;
+    }
+}

@@ -1,0 +1,43 @@
+/* stylelint-disable */
+
+.acfm-list-inline-white-bg {
+    padding-left: initial;
+    list-style: none;
+
+    &__item {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    &__text {
+        text-align: left;
+    }
+
+    &__icon {
+        &:hover {
+            & path {
+                fill: $brand_primary;
+            }
+        }
+
+        & svg {
+            fill: $brand_primary;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 70px;
+        height: 70px;
+        background: $brand_white;
+        border-radius: 5rem;
+    }
+}
+
+img {
+    &.acfm-image {
+        max-width: 70px;
+    }
+}

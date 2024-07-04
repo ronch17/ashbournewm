@@ -1,0 +1,111 @@
+/* stylelint-disable */
+
+@media #{$lg} {
+    .gray-bg.homepage {
+        .container {
+            top: 20rem;
+        }
+    }
+}
+
+.inline {
+    .acfm-list-white-card {
+        @media #{$md} {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+.acfm-list-white-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    list-style: none;
+
+    @media #{$md} {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 3rem 0;
+        gap: 2.5rem;
+    }
+
+    @media #{$navbar_breakpoint} {
+        justify-content: center;
+    }
+
+    &__number,
+    &__icon {
+        position: relative;
+        bottom: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 65px;
+        height: 65px;
+    }
+
+    &__title {
+        margin-bottom: 1.5rem;
+        font-size: 5rem;
+        font-weight: 600;
+        line-height: 1.4em;
+        color: $brand_primary;
+        text-align: center;
+    }
+
+    &__text {
+        font-weight: $font_weight_bold;
+        color: $brand_dark;
+    }
+
+    &__item {
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 3rem;
+        margin: 1rem;
+        font-size: 18px;
+        text-align: center;
+        //background: transparent;
+        //border-radius: 3rem;
+        //box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.03);
+        transition: 0.4s ease-out;
+        svg {
+            & path {
+                fill: $brand_dark;
+            }
+        }
+
+        @media #{$sm} {
+            flex-basis: 24%;
+        }
+
+        @media #{$md} {
+            flex-basis: 15%;
+            margin: 0;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        color: $brand_primary;
+
+        svg {
+            fill: transparent;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: -3rem;
+    }
+}
+
+.no_icon_bg {
+    .acfm-list-card__icon {
+        background: transparent;
+    }
+}
