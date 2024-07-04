@@ -5,7 +5,7 @@ namespace prfwp;
 define( 'PRFWP_PATH', plugin_dir_path( __FILE__ ) );
 define( 'PRFWP_URL', plugins_url( '', __FILE__ ) );
 
-define( 'BRAND_NAME', 'ashbournewm2' );
+define( 'BRAND_NAME', 'ashbournewm' );
 
 require_once( PRFWP_PATH . 'vendor/autoload.php' );
 

@@ -17,7 +17,7 @@ LAST_COMMIT=`git log -1 --pretty=%B`
 #  g               ; # global flag
 TRIM_LAST_COMMIT="$(echo -e $(echo ${LAST_COMMIT} | tr -d '\r') | sed -e 'y/ /~/;s/-/~/g;s/,//g')"
 
-docker exec ashbournewm2-db-1 sh -c 'exec mariadb-dump wordpress -uwordpress -p'${DB_PASSWORD}|gzip -9 > ~/${LOCAL_WORDPRESS_DIRECTORY}/${LOCAL_DIRECTORY}/backup/__after-commit__~${TRIM_LAST_COMMIT}~__wp-${LOCAL_DB_EXPORT_NAME}-`date +%F-%T`.sql.gz
+docker exec ashbournewm-db-1 sh -c 'exec mariadb-dump wordpress -uwordpress -p'${DB_PASSWORD}|gzip -9 > ~/${LOCAL_WORDPRESS_DIRECTORY}/${LOCAL_DIRECTORY}/backup/__after-commit__~${TRIM_LAST_COMMIT}~__wp-${LOCAL_DB_EXPORT_NAME}-`date +%F-%T`.sql.gz
 if [ $? != 0 ];then
   echo error in local: newtemplate2
 else

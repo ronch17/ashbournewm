@@ -24,7 +24,7 @@
         ]
     },
     "publicPath": "/wp-content/themes/prfwp",
-    "devUrl": "http://ashbournewm2.test",
+    "devUrl": "http://ashbournewm.test",
     "proxyUrl": "http://localhost:3117",
     "cacheBusting": "[name]_[hash:8]",
     "_cacheBusting": "[name]",

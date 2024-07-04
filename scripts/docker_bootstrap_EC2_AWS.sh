@@ -6,7 +6,7 @@ cd "$(dirname "$0")"
 # source common variables
 source ./variables.sh
 #
-scp -i ~/.ssh/wisetrade -r ~/ssl-keys/ashbournewm2/ssl-for-origin/ ec2-user@${DEST_SERVER_IP}:~/ && sleep 5 &&
+scp -i ~/.ssh/wisetrade -r ~/ssl-keys/ashbournewm/ssl-for-origin/ ec2-user@${DEST_SERVER_IP}:~/ && sleep 5 &&
 ssh ${DEST_SERVER} "sudo yum update -y &&
 sudo yum install -y docker &&
 sudo service docker start &&
@@ -18,4 +18,4 @@ sudo yum install -y git &&
 ssh-keygen &&
 echo -e '\n\n\n' | ssh-keygen -t rsa"
 #
-# git clone git@bitbucket.org:binaricore/ashbournewm2.git && cd ashbournewm2/ && git config core.fileMode false
+# git clone git@bitbucket.org:binaricore/ashbournewm.git && cd ashbournewm/ && git config core.fileMode false

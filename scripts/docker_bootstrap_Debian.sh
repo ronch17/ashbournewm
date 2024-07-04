@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 # source common variables
 source ./variables.sh
 #
-scp -r /home/${LOCAL_USER}/ashbournewm2/ssl-for-origin root@${DEST_SERVER_IP}:/home/proftit/ && sleep 5 &&
+scp -r /home/${LOCAL_USER}/ashbournewm/ssl-for-origin root@${DEST_SERVER_IP}:/home/proftit/ && sleep 5 &&
 sshpass -p ${DEST_PASSWORD} ssh root@${DEST_SERVER_IP} "apt-get install -y rsync && sleep 5 &&
 useradd -m -s /bin/bash proftit && sleep 5 &&
 (echo ${PROFTIT_PASSWORD}; echo ${PROFTIT_PASSWORD}) | passwd proftit && sleep 5 &&
@@ -27,4 +27,4 @@ echo ${LOCAL_SSH_KEY} | sudo tee -a ~/.ssh/authorized_keys && sleep 5 &&
 echo 'PasswordAuthentication no' | sudo tee -a ~/.ssh/config && sleep 5 &&
 git config --global user.email 'dest@${DEST_DOMAIN}' && git config --global user.name 'Dest Server' && sleep 5 &&
 cat ~/.ssh/id_rsa.pub"
-# git clone git@bitbucket.org:binaricore/ashbournewm2.git && cd ashbournewm2/ && git config core.fileMode false
+# git clone git@bitbucket.org:binaricore/ashbournewm.git && cd ashbournewm/ && git config core.fileMode false
