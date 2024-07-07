@@ -45,6 +45,7 @@ $shadows-big: multiple-box-shadow(100);
 }
 
 .stars {
+    z-index: 5;
     position: fixed;
     left: 12%;
     width: 1px;
@@ -65,6 +66,7 @@ $shadows-big: multiple-box-shadow(100);
 }
 
 .stars2 {
+    z-index: 5;
     position: fixed;
     width: 2px;
     height: 2px;
@@ -84,6 +86,7 @@ $shadows-big: multiple-box-shadow(100);
 }
 
 .stars3 {
+    z-index: 5;
     position: fixed;
     left: 25%;
     width: 3px;
