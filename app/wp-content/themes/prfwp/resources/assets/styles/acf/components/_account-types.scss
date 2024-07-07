@@ -50,6 +50,7 @@
 
         @media #{$navbar_until_breakpoint} {
             margin-top: 12rem;
+            background-size: contain;
         }
 
         @media #{$xl} {

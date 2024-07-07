@@ -30,9 +30,7 @@ export default {
         let scrollWatcherDown = false;
         let isTop = true;
 
-        window.addEventListener('load', function () {
-            document.getElementById('page-loader').remove();
-        })
+
 
         function clearActiveClass() {
             planetsNavItem.forEach(item => item.classList.remove('active'));

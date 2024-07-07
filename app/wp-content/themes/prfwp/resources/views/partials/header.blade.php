@@ -1,5 +1,6 @@
 <style>
-  .page-loader{
+
+  .page-loader {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -7,9 +8,16 @@
     left:0;
     background: #ffffff;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
-<div id="page-loader" class="page-loader">LOADING....</div>
+
+<div id="page-loader" class="page-loader">
+  @svg(Logo)
+  <div class="lds-ripple"><div></div><div></div></div>
+</div>
 
 <script>
   window.addEventListener('load', function () {
