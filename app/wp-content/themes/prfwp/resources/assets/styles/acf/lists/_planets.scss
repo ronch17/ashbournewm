@@ -46,7 +46,7 @@
             width: 160%;
             content: '';
             border: 1px solid;
-            border-image: url(http://ashbournewm.test/wp-content/uploads/2024/06/Frame-13.png) round 1%;
+            //border-image: url('../../../images/Frame13.png') round 1%;
         }
 
         &:hover {
@@ -270,6 +270,7 @@
         }
 
         .tilt-card {
+            z-index: 9;
             opacity: 0;
             animation: 2s flashlight 1.5s forwards;
         }
@@ -319,7 +320,7 @@
     }
 
     100% {
-        opacity: 100%;
+        opacity: 1;
     }
 }
 

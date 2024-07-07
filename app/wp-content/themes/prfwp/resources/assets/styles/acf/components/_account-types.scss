@@ -23,39 +23,24 @@
         @include top-svg();
     }
 
-    .slick-slide {
-        li.Lunar {
-            background-image: url('https://ashbournewm.com/wp-content/uploads/2024/06/Layer_1-3.png');
-        }
-        li.Stellar {
-            background-image: url('https://ashbournewm.com/wp-content/uploads/2024/06/green.png');
-        }
-        li.Celestia {
-            background-image: url('https://ashbournewm.com/wp-content/uploads/2024/06/red.png');
-        }
-        li.Galaxy {
-            background-image: url('https://ashbournewm.com/wp-content/uploads/2024/06/blue.png');
-        }
-        li.SuperVoid {
-            background-image: url('https://ashbournewm.com/wp-content/uploads/2024/06/yellow.png');
-        }
-    }
+    //.slick-slide {
+    //    li.Lunar {
+    //        background-image: url('../../../images/cards/purple.png');
+    //    }
+    //    li.Stellar {
+    //        background-image: url('../../../images/cards/green.png');
+    //    }
+    //    li.Celestia {
+    //        background-image: url('../../../images/cards/red.png');
+    //    }
+    //    li.Galaxy {
+    //        background-image: url('../../../images/cards/blue.png');
+    //    }
+    //    li.SuperVoid {
+    //        background-image: url('../../../images/cards/yellow.png');
+    //    }
+    //}
 
-    li[title='Lunar'] {
-        background-image: url('https://ashbournewm.com/wp-content/uploads/2024/06/Layer_1-3.png');
-    }
-    li[title='Stellar'] {
-        background-image: url('https://ashbournewm.com/wp-content/uploads/2024/06/green.png');
-    }
-    li[title='Celestia'] {
-        background-image: url('https://ashbournewm.com/wp-content/uploads/2024/06/red.png');
-    }
-    li[title='Galaxy'] {
-        background-image: url('https://ashbournewm.com/wp-content/uploads/2024/06/blue.png');
-    }
-    li[title='SuperVoid'] {
-        background-image: url('https://ashbournewm.com/wp-content/uploads/2024/06/yellow.png');
-    }
 
     &__item {
         @include fade-in-bottom();

@@ -1,5 +1,11 @@
 @set($component, ' acfm-list-' . get_sub_field('style'))
 
+<style>
+  .acfm-list-planets__image::after {
+    border-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/Frame13.png')  round 1%;
+  }
+</style>
+
 <ul
   class="acfm-{{App::layout()}}{{$component}}">
   @fields('list_generator')

@@ -1,5 +1,24 @@
 @set($component, 'acfm-'. App::layout())
 
+<style>
+  .acfm-account-types li[title='Lunar'] {
+    background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/cards/purple.png');
+  }
+
+   .acfm-account-types  li[title='Stellar'] {
+    background-image:url('<?php echo get_template_directory_uri(); ?>/assets/images/cards/green.png');'
+  }
+   .acfm-account-types  li[title='Celestia'] {
+    background-image:url('<?php echo get_template_directory_uri(); ?>/assets/images/cards/red.png');'
+  }
+   .acfm-account-types  li[title='Galaxy'] {
+    background-image:url('<?php echo get_template_directory_uri(); ?>/assets/images/cards/blue.png');'
+  }
+   .acfm-account-types  li[title='SuperVoid'] {
+    background-image:url('<?php echo get_template_directory_uri(); ?>/assets/images/cards/yellow.png');'
+  }
+</style>
+
 <div class="{{$component}}-wrapper">
 
   <ul class="{{$component}}">
