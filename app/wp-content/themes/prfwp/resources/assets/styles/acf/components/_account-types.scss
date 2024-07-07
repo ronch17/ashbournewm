@@ -41,7 +41,6 @@
     //    }
     //}
 
-
     &__item {
         @include fade-in-bottom();
         max-width: em(450, 16);

@@ -253,9 +253,9 @@ export default {
 
         const observerExit1 = new IntersectionObserver(observerCallbackExit1, observerOptionsExit1);
 
-            sections.forEach(section => {
-                observerExit1.observe(section);
-            });
+        sections.forEach(section => {
+            observerExit1.observe(section);
+        });
 
 
 
@@ -533,7 +533,7 @@ export default {
                 let $slideTitle = $(slider.$slides[i])
                     .find('li')
                     .attr('title');
-                return '<img class="acfm-image" src="https://ashbournewm.com/wp-content/themes/prfwp/dist/images/cards/' + $slideTitle + '.png" alt="'+ $slideTitle +'"><button class="tab tab-title">' + $slideTitle + '</button>';
+                return '<img class="acfm-image" src="https://ashbournewm.com/wp-content/uploads/2024/07/' + $slideTitle + '.png" alt="' + $slideTitle + '"><button class="tab tab-title">' + $slideTitle + '</button>';
             },
             infinite: true,
             autoplay: false,
