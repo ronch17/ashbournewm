@@ -19,11 +19,6 @@
   <div class="lds-ripple"><div></div><div></div></div>
 </div>
 
-<script>
-  window.addEventListener('load', function () {
-    document.getElementById('page-loader').remove();
-  })
-</script>
 
 <header class="prfwp-header">
   <nav class="prfwp-navbar">

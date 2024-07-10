@@ -65,66 +65,6 @@ export default {
             });
         });
 
-        // document.querySelectorAll('a.enableHash').forEach(function (link) {
-        //     link.addEventListener('click', function (event) {
-        //         event.preventDefault();
-        //         let targetId = this.getAttribute('href').substring(1);
-        //         let targetElement = document.getElementById(targetId);
-        //
-        //         checkClickedNav = true;
-        //
-        //
-        //         setTimeout(() => {
-        //             checkClickedNav = false;
-        //         }, 1000)
-        //
-        //         if (targetElement) {
-        //             // Scroll smoothly to the target element
-        //
-        //                 targetElement.scrollIntoView({behavior: 'smooth'});
-        //                 scrollWatcherDown = false;
-        //
-        //             // Update the URL hash without jumping
-        //             history.pushState(null, null, '#' + targetId);
-        //         }
-        //     });
-        // });
-        //
-        //
-        // planetsNavItem.forEach((item) => {
-        //     console.log(scrollWatcherDown);
-        //     item.addEventListener('click', () => {
-        //         clearActiveClass()
-        //         clearVisibleClass()
-        //         console.log(item);
-        //         item.classList.add('active');
-        //         let hrefValue = item.getAttribute('href');
-        //         console.log(hrefValue);
-        //
-        //         document.querySelector(hrefValue).scrollTo({behavior: 'smooth'})
-        //
-        //         let currentElement = document.querySelector(hrefValue);
-        //
-        //         const sectionByID = document.querySelector(hrefValue).classList.add('visible');
-        //
-        //         let scrollTop = window.scrollY || document.documentElement.scrollTop;
-        //
-        //         console.log(scrollTop)
-        //
-        //
-        //
-        //         //
-        //         // scrollWatcherDown = true;
-        //         //
-        //         // if (!scrollWatcherDown) {
-        //         //     const rect = scrollWatcher.getBoundingClientRect();
-        //         //     const currentWidth = rect.width;
-        //         //     const newWidth = currentWidth - (currentWidth / 5);
-        //         //     scrollWatcher.style.width = `${newWidth}px`;
-        //         // }
-        //     })
-        // })
-
         //Add custom divs (floating stars)
 
         if (acPage){
@@ -633,6 +573,180 @@ export default {
         }
 
         checkCurrentSlug();
+
+
+// scroll reveal
+        function revealFunction() {
+            if (window.innerWidth > 768) {
+                ScrollReveal().reveal('.acfm-list-Numbered-card__item:nth-child(1)', {
+                    origin: 'left',
+                    duration: 1000,
+                    distance: '100%',
+                    easing: 'ease-in-out',
+                    reset: false,
+                });
+                ScrollReveal().reveal('.acfm-list-Numbered-card__item:nth-child(2)', {
+                    origin: 'bottom',
+                    duration: 1000,
+                    distance: '100%',
+                    easing: 'ease-in-out',
+                    reset: false,
+                });
+                ScrollReveal().reveal('.acfm-list-Numbered-card__item:nth-child(3)', {
+                    origin: 'right',
+                    duration: 1000,
+                    distance: '100%',
+                    easing: 'ease-in-out',
+                    reset: false,
+                });
+                ScrollReveal().reveal('.acfm-list-Numbered-card__item:nth-child(4)', {
+                    origin: 'left',
+                    duration: 1300,
+                    distance: '100%',
+                    easing: 'ease-in-out',
+                    reset: false,
+                });
+            }
+
+            ScrollReveal().reveal('.gray_card:nth-child(1)', {
+                duration: 900,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+            ScrollReveal().reveal('.gray_card:nth-child(2)', {
+                duration: 1100,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+            ScrollReveal().reveal('.gray_card:nth-child(3)', {
+                duration: 1250,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+
+            ScrollReveal().reveal('.white_card:nth-child(1)', {
+                duration: 900,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+            ScrollReveal().reveal('.white_card:nth-child(2)', {
+                duration: 1100,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+            ScrollReveal().reveal('.white_card:nth-child(3)', {
+                duration: 1250,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+
+            ScrollReveal().reveal('.fade-left-col', {
+                origin: 'left',
+                duration: 1300,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+            ScrollReveal().reveal('.our-platforms .acfm-image', {
+                beforeReveal: function (domEl) {
+                    // Animate the element's position before reveal
+                    domEl.style.transition = 'transform 1.7s ease';
+                    domEl.style.transform = 'translateX(-500px)'; // Move 100px to the right (adjust as needed)
+                },
+                afterReveal: function (domEl) {
+                    // Reset the element's position after reveal
+                    domEl.style.transition = 'transform 1.7s ease'; // Disable transition for immediate change
+                    domEl.style.transform = 'translateX(-500px)'; // Move back to original position
+                },
+                // afterReset: function (domEl) {
+                //     // Reset the element's position when hidden
+                //     domEl.style.transform = 'translateX(1000px)'; // Move back to the transformed position
+                // },
+            });
+
+            ScrollReveal().reveal('.our-platforms .acfm-image .right-reveal', {
+                beforeReveal: function (domEl) {
+                    // Animate the element's position before reveal
+                    domEl.style.transition = 'transform 1.7s ease';
+                    domEl.style.transform = 'translateX(500px)'; // Move 100px to the right (adjust as needed)
+                },
+                afterReveal: function (domEl) {
+                    // Reset the element's position after reveal
+                    domEl.style.transition = 'transform 1.7s ease'; // Disable transition for immediate change
+                    domEl.style.transform = 'translateX(500px)'; // Move back to original position
+                },
+            });
+
+            ScrollReveal().reveal('img.hero-img', {
+                origin: 'right',
+                duration: 1400,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+
+            ScrollReveal().reveal('.fade-up', {
+                origin: 'bottom',
+                duration: 1200,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+
+            ScrollReveal().reveal('.acfm-list-default-white-bg__item:nth-child(1)', {
+                origin: 'bottom',
+                duration: 800,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+            ScrollReveal().reveal('.acfm-list-default-white-bg__item:nth-child(2)', {
+                origin: 'bottom',
+                duration: 900,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+            ScrollReveal().reveal('.acfm-list-default-white-bg__item:nth-child(3)', {
+                origin: 'bottom',
+                duration: 1000,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+            ScrollReveal().reveal('.acfm-list-default-white-bg__item:nth-child(4)', {
+                origin: 'bottom',
+                duration: 1100,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+
+            ScrollReveal().reveal('.acfm-list-default__item', {
+                origin: 'bottom',
+                duration: 1200,
+                distance: '100%',
+                easing: 'ease-in-out',
+                reset: false,
+            });
+
+            ScrollReveal().reveal('.grow-img', {
+                delay: 200, // Delay before the animation starts in milliseconds
+                duration: 1000, // Duration of the animation in milliseconds
+                scale: 1, // Initial scale of the element
+                distance: '50px', // Distance the element moves during the animation
+                origin: 'center', // Origin of the animation
+                easing: 'cubic-bezier(0.5, 0, 0, 1)', // Easing function for the animation
+                reset: false, // Reveal the element only once
+            });
+        }
+        revealFunction();
     },
 };
 
@@ -656,179 +770,9 @@ $('button.back-to-top').click(function () {
     return false;
 });
 
-// scroll reveal
-
-function revealFunction() {
-    if (window.innerWidth > 768) {
-        ScrollReveal().reveal('.acfm-list-Numbered-card__item:nth-child(1)', {
-            origin: 'left',
-            duration: 1000,
-            distance: '100%',
-            easing: 'ease-in-out',
-            reset: false,
-        });
-        ScrollReveal().reveal('.acfm-list-Numbered-card__item:nth-child(2)', {
-            origin: 'bottom',
-            duration: 1000,
-            distance: '100%',
-            easing: 'ease-in-out',
-            reset: false,
-        });
-        ScrollReveal().reveal('.acfm-list-Numbered-card__item:nth-child(3)', {
-            origin: 'right',
-            duration: 1000,
-            distance: '100%',
-            easing: 'ease-in-out',
-            reset: false,
-        });
-        ScrollReveal().reveal('.acfm-list-Numbered-card__item:nth-child(4)', {
-            origin: 'left',
-            duration: 1300,
-            distance: '100%',
-            easing: 'ease-in-out',
-            reset: false,
-        });
-    }
-
-    ScrollReveal().reveal('.gray_card:nth-child(1)', {
-        duration: 900,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-    ScrollReveal().reveal('.gray_card:nth-child(2)', {
-        duration: 1100,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-    ScrollReveal().reveal('.gray_card:nth-child(3)', {
-        duration: 1250,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-
-    ScrollReveal().reveal('.white_card:nth-child(1)', {
-        duration: 900,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-    ScrollReveal().reveal('.white_card:nth-child(2)', {
-        duration: 1100,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-    ScrollReveal().reveal('.white_card:nth-child(3)', {
-        duration: 1250,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-
-    ScrollReveal().reveal('.fade-left-col', {
-        origin: 'left',
-        duration: 1300,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-    ScrollReveal().reveal('.our-platforms .acfm-image', {
-        beforeReveal: function (domEl) {
-            // Animate the element's position before reveal
-            domEl.style.transition = 'transform 1.7s ease';
-            domEl.style.transform = 'translateX(-500px)'; // Move 100px to the right (adjust as needed)
-        },
-        afterReveal: function (domEl) {
-            // Reset the element's position after reveal
-            domEl.style.transition = 'transform 1.7s ease'; // Disable transition for immediate change
-            domEl.style.transform = 'translateX(-500px)'; // Move back to original position
-        },
-        // afterReset: function (domEl) {
-        //     // Reset the element's position when hidden
-        //     domEl.style.transform = 'translateX(1000px)'; // Move back to the transformed position
-        // },
-    });
-
-    ScrollReveal().reveal('.our-platforms .acfm-image .right-reveal', {
-        beforeReveal: function (domEl) {
-            // Animate the element's position before reveal
-            domEl.style.transition = 'transform 1.7s ease';
-            domEl.style.transform = 'translateX(500px)'; // Move 100px to the right (adjust as needed)
-        },
-        afterReveal: function (domEl) {
-            // Reset the element's position after reveal
-            domEl.style.transition = 'transform 1.7s ease'; // Disable transition for immediate change
-            domEl.style.transform = 'translateX(500px)'; // Move back to original position
-        },
-    });
-
-    ScrollReveal().reveal('img.hero-img', {
-        origin: 'right',
-        duration: 1400,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-
-    ScrollReveal().reveal('.fade-up', {
-        origin: 'bottom',
-        duration: 1200,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-
-    ScrollReveal().reveal('.acfm-list-default-white-bg__item:nth-child(1)', {
-        origin: 'bottom',
-        duration: 800,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-    ScrollReveal().reveal('.acfm-list-default-white-bg__item:nth-child(2)', {
-        origin: 'bottom',
-        duration: 900,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-    ScrollReveal().reveal('.acfm-list-default-white-bg__item:nth-child(3)', {
-        origin: 'bottom',
-        duration: 1000,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-    ScrollReveal().reveal('.acfm-list-default-white-bg__item:nth-child(4)', {
-        origin: 'bottom',
-        duration: 1100,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-
-    ScrollReveal().reveal('.acfm-list-default__item', {
-        origin: 'bottom',
-        duration: 1200,
-        distance: '100%',
-        easing: 'ease-in-out',
-        reset: false,
-    });
-
-    ScrollReveal().reveal('.grow-img', {
-        delay: 200, // Delay before the animation starts in milliseconds
-        duration: 1000, // Duration of the animation in milliseconds
-        scale: 1, // Initial scale of the element
-        distance: '50px', // Distance the element moves during the animation
-        origin: 'center', // Origin of the animation
-        easing: 'cubic-bezier(0.5, 0, 0, 1)', // Easing function for the animation
-        reset: false, // Reveal the element only once
-    });
-}
 
 window.addEventListener('load', () => {
-    revealFunction();
+
+    document.getElementById('page-loader').remove();
+
 });
