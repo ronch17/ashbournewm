@@ -23,30 +23,12 @@
         @include top-svg();
     }
 
-    //.slick-slide {
-    //    li.Lunar {
-    //        background-image: url('../../../images/cards/purple.png');
-    //    }
-    //    li.Stellar {
-    //        background-image: url('../../../images/cards/green.png');
-    //    }
-    //    li.Celestia {
-    //        background-image: url('../../../images/cards/red.png');
-    //    }
-    //    li.Galaxy {
-    //        background-image: url('../../../images/cards/blue.png');
-    //    }
-    //    li.SuperVoid {
-    //        background-image: url('../../../images/cards/yellow.png');
-    //    }
-    //}
 
     &__item {
         @include fade-in-bottom();
         max-width: em(450, 16);
         height: 60rem;
         background-repeat: no-repeat;
-        //background-image: url('https://ashbournewm.com/wp-content/uploads/2024/06/Layer_1-2.png');
 
         @media #{$navbar_until_breakpoint} {
             margin-top: 12rem;
@@ -126,6 +108,7 @@
 
     &__fields {
         padding: 0;
+        translate: -8% 0%;
     }
 
     &__value {
@@ -253,7 +236,7 @@
     &__text {
         color: $brand_white;
         text-align: left;
-        @include responsive-font(20);
+        @include responsive-font(16);
     }
 
     .acfm-btn-primary:hover::after {

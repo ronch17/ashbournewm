@@ -23,11 +23,9 @@ export default {
         const acPage = document.querySelector('.account-types-new');
         const planetsNav = document.querySelector('.planets-navbar');
         const planetsNavItem = document.querySelectorAll('.planets-navbar ul a');
-        const scrollWatcher = document.querySelector('.scroll-watcher');
         const lunarSection = document.getElementById('lunar');
         const galaxySection = document.getElementById('galaxy');
         let checkClickedNav = false;
-        let scrollWatcherDown = false;
         let isTop = true;
 
 
@@ -289,25 +287,6 @@ export default {
             animationData: indices,
         });
 
-        //         const animations = [
-        //             { container: document.querySelectorAll('div#forex'), path: forex },
-        //             { container: document.querySelectorAll('div#wallet'), path: wallet },
-        //             // Add more configurations as needed
-        //         ];
-        //
-        //
-        // // Load each animation using a loop
-        //         animations.forEach((container, path)  => {
-        //             let cont = container;
-        //             console.log([cont], path);
-        //             Lottie.loadAnimation({
-        //                 container: container, // DOM element where the animation will be rendered
-        //                 renderer: 'svg', // Choose renderer (svg or canvas)
-        //                 loop: true, // Set loop to true or false
-        //                 autoplay: true, // Set autoplay to true or false
-        //                 path: path, // Path to the JSON file of the animation
-        //             });
-        //         });
 
         // Add toggle-sub-menu button to main navigation links with children
         initMainNavigation($('.topNavigation'));
